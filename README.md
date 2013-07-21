@@ -56,24 +56,24 @@ If no channels are available, she is prompted to make a channel.
 
 
 ## Design questions
-1. Is joining a channel like stumbling for wifi networks? (You get a list of channels with pinboards in your location). Or should it be the responsibility of people at the location to connect a user to a channel (signage, word-of-mouth).
++ Is joining a channel like stumbling for wifi networks? (You get a list of channels with pinboards in your location). Or should it be the responsibility of people at the location to connect a user to a channel (signage, word-of-mouth).
 
-2. If joining a channel is like picking a wifi network, should some channels be invisible (cf. hidden SSIDs)?
++ If joining a channel is like picking a wifi network, should some channels be invisible (cf. hidden SSIDs)?
 
-3. Can a channel's pinboard be arbitrarily large or small? (Consider some end-user implications of large pinboards: easy to spam large groups of people).
++ Can a channel's pinboard be arbitrarily large or small? (Consider some end-user implications of large pinboards: easy to spam large groups of people).
 
-4. Can pinboards be moved? (Consider selling a GPS dongle to a food truck. The #kogi channel has a pinboard in the radius around the dongle).
++ Can pinboards be moved? (Consider selling a GPS dongle to a food truck. The #kogi channel has a pinboard in the radius around the dongle).
 
 ## Engineering questions
-1. Is it feasible to let users auto-discover (stumble) onto pinboards the way people stumble onto wifi networks?
++ Is it feasible to let users auto-discover (stumble) onto pinboards the way people stumble onto wifi networks?
 
 *What does this mean, exactly?*
 
-2. What the absolute simplest way for us to describe rectangles in space? What's the absolute simplest way for us to see if coordinates lie within a rectangular region?
++ What the absolute simplest way for us to describe rectangles in space? What's the absolute simplest way for us to see if coordinates lie within a rectangular region?
 
 *Probably origin and size i.e., (lat, long) and (width, height). Hit testing would be as simple as is x <= lat + width && y <= long + height?*
 
-3. What's the absolute simplest implementation of a pinboard? What's the least functionality it can have while still being a 100% satisfactory prototype, ready to find funding?
++ What's the absolute simplest implementation of a pinboard? What's the least functionality it can have while still being a 100% satisfactory prototype, ready to find funding?
 
 *A collection of post objects, each of which has a poster, content, timestamp, some comments, and maybe some kind of score (upvotes - downvotes?).*
 
