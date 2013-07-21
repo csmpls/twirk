@@ -74,9 +74,7 @@ If no channels are available, she is prompted to make a channel.
 ## Implementation
 Every channel has boundaries expressed as coordinates, preferences, content, etc.
 
-However, a separate database also has the midpoints for  
-
-When the app (A) is opened, it sends us its coordinates. We send A a list of channels within [max_channel_width/2].
+However, a separate database also has the midpoints for these channels. When the app (A) is opened, it sends us its coordinates. We send A a list of channels within [max_channel_width/2]. This is to make it easy to prune the list of possible channels down to only a few candidates when someone opens the app — we don't want to check if a coordinate is inside a polygon more than we have to.
 
 The pinboard associated with a channel is hosted at a URL, which is not known to users. Joining a channel loads this URL into the  app's browser.
 
