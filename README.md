@@ -24,9 +24,15 @@ Any user can create a channel. This user can invite others to moderate the chann
 
 The moderators of a channel draw a rectangle on a map. The rectangle represents the space in which this channel (i.e., this channel's pinboard) can be accessed.
 
-Moderators can turn a channel on or off. They can also delete a channel, permanently deleting all the content on it from our servers.
+Moderators can turn a channel on or off, delete comments on a channel & delete posts on a channel. They can also delete a channel, permanently deleting all the content on it from our servers.
 
-Moderators can set a password for their channel. They can also delete content on the channel's pinboard.
+To make a private channel, moderators must add users to the channel.
+
+When a user opens up the app, she sees the channels she's in.
+
+Private channels to which she is not added are invisible to her.
+
+If no channels are available, she is prompted to make a channel.
 
 
 ## Use cases
@@ -38,15 +44,15 @@ Moderators can set a password for their channel. They can also delete content on
 
 *We do not support this use case. Decidedly defeats the purpose of this project.*
 
-> The channel #kogitruck3 moves with its truck. Just like the stickers on the truck, the pinboard is the same whether the the truck's on Sawtelle or Ventura.
-
-*Our current design does not support this use case, but this gestures toward an excellent tool for promotion. We might sell a special GPS-enabled dongle to people with this need. Excellent for promotion.*
-
 > \#collablab their channel to include their physical lab, but also Food for Thought, the go-to sandwich place a ways down the street. They want to separate communications meant for the lab and communications meant for the lunch break. They want people to leave tips and sandwich recs, and they want to make sure these tips don't get buried under more work-crucal posts. 
 
 > Maybe a new post in Food For Thought shows up in light gray when a user's reading the Collablab pinboard.  
 
 *Our current design does not support this use case. It may not be a bad idea to let each channel have multiple pinboards. Perhaps users could pay for this functionality.*
+
+> The channel #kogitruck3 moves with its truck. Just like the stickers on the truck, the pinboard is the same whether the the truck's on Sawtelle or Ventura.
+
+*Our current design does not support this use case, but this gestures toward an excellent tool for promotion. We might sell a special GPS-enabled dongle to people with this need.*
 
 
 ## Design questions
