@@ -65,17 +65,21 @@ If no channels are available, she is prompted to make a channel.
 4. Can pinboards be moved? (Consider selling a GPS dongle to a food truck. The #kogi channel has a pinboard in the radius around the dongle).
 
 ## Engineering questions
-1. Is it feasible to let users auto-discover (stumble) onto inboards the way people stumble onto wifi networks? 
+1. Is it feasible to let users auto-discover (stumble) onto pinboards the way people stumble onto wifi networks?
+*What does this mean, exactly?*
 
 2. What the absolute simplest way for us to describe rectangles in space? What's the absolute simplest way for us to see if coordinates lie within a rectangular region?
+*Probably origin and size i.e., (lat, long) and (width, height). Hit testing would be as simple as is x <= lat + width && y <= long + height?*
 
-3. What's the absolute simplest implementation of a pinboard? What's the least functionality it can have while still being a 100% satisfactory prototype, ready to find funding? 
+3. What's the absolute simplest implementation of a pinboard? What's the least functionality it can have while still being a 100% satisfactory prototype, ready to find funding?
+*A collection of post objects, each of which has a poster, content, timestamp, some comments, and maybe some kind of score (upvotes - downvotes?).*
 
 ## Implementation
 Every channel has boundaries expressed as coordinates, preferences, content, etc.
 
-However, a separate database also has the midpoints for these channels. When the app (A) is opened, it sends us its coordinates. We send A a list of channels within [max_channel_width/2]. This is to make it easy to prune the list of possible channels down to only a few candidates when someone opens the app — we don't want to check if a coordinate is inside a polygon more than we have to.
+However, a separate database also has the midpoints for these channels. When the app (A) is opened, it sends us its coordinates. We send A a list of channels within [max_channel_width/2]. This is to make it easy to prune the list of possible channels down to only a few candidates when someone opens the app — we don't want to check if a coordinate is inside a polygon more than we have to.
+*The computational complexity of this is exactly equivalent to just calculating whether the user's location is within each channel's bounds. This doesn't really save any work.*
 
-The pinboard associated with a channel is hosted at a URL, which is not known to users. Joining a channel loads this URL into the  app's browser.
+The pinboard associated with a channel is hosted at a URL, which is not known to users. Joining a channel loads this URL into the app's browser.
 
-*tk………….*   
+*tk.............*
